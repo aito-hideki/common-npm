@@ -27,7 +27,7 @@ export default {
     },
     spinnerClass: {
       type: [String, Object, Array],
-      default: ''
+      default: 'mx-auto'
     }
   }
 }
