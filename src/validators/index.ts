@@ -1,17 +1,32 @@
-export const isValid = (value: any) => !!value || 'This field is required'
-export const isEmail = (email: string) =>
-  /(.+)@(.+){2,}\.(.+){2,}/.test(email) || 'Please enter a valid email'
-export const isZipCode = (zip: string) =>
-  /^\d{5}(?:[-\s]\d{4})?$/.test(zip) || 'Please enter a valid zip code'
-export const isValidPhone = (phone: string) =>
-  /\(\d{3}\) \d{3}-\d{4}( ext \d{2,5})?/.test(phone) ||
-  'Please enter a valid phone number'
-export const isValidFax = (phone: string) =>
-  /\(\d{3}\) \d{3}-\d{4}( ext \d{2,5})?/.test(phone) ||
-  'Please enter a valid fax number'
-export const isValidSSN = (ssn: string) =>
-  /\d{3}-\d{2}-\d{4}/.test(ssn) ||
-  'Please enter a valid SSN'
+export const isValid = (
+  value: any,
+  message = 'This field is required'
+) => !!value || message
+
+export const isEmail = (
+  email: string,
+  message = 'Please enter a valid email'
+) => /(.+)@(.+){2,}\.(.+){2,}/.test(email) || message
+
+export const isZipCode = (
+  zip: string,
+  message = 'Please enter a valid zip code'
+) => /^\d{5}(?:[-\s]\d{4})?$/.test(zip) || message
+
+export const isValidPhone = (
+  phone: string,
+  message = 'Please enter a valid phone number'
+) => /\(\d{3}\) \d{3}-\d{4}( ext \d{2,5})?/.test(phone) || message
+
+export const isValidFax = (
+  fax: string,
+  message = 'Please enter a valid fax number'
+) => /\(\d{3}\) \d{3}-\d{4}( ext \d{2,5})?/.test(fax) || message
+
+export const isValidSSN = (
+  ssn: string,
+  message = 'Please enter a valid SSN'
+) => /\d{3}-\d{2}-\d{4}/.test(ssn) || message
 
 const formatPhoneNumber = (number = '', format = true) => {
   if (!format) {
