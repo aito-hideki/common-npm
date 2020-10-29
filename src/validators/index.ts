@@ -28,7 +28,7 @@ export const isValidSSN = (
   message = 'Please enter a valid SSN'
 ) => /\d{3}-\d{2}-\d{4}/.test(ssn) || message
 
-const formatPhoneNumber = (number = '', format = true) => {
+export const formatPhoneNumber = (number = '', format = true) => {
   if (!format) {
     return number.replace(/\D/g, '')
   }
@@ -47,7 +47,7 @@ const formatPhoneNumber = (number = '', format = true) => {
   return ''
 }
 
-const formatSSN = (ssn = '', format = true) => {
+export const formatSSN = (ssn = '', format = true) => {
   if (!format) {
     return ssn.replace(/\D/g, '')
   }
