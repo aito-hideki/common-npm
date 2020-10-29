@@ -32,6 +32,7 @@
     "vue": "^2.6.11",
     "vue-fragment": "^1.5.1",
     "vue-styled-components": "^1.5.1",
+    "vue-toastr": "^2.1.2",
     "vuetify": "^2.3.16"
   },
   "devDependencies": {
