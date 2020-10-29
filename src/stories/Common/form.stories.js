@@ -16,10 +16,12 @@ const Template = (args, { argTypes }) => ({
     <v-card width="500">
       <common-form
         name="common-form"
+        #default="{ isValidForm }"
         @submit="onSubmit"
       >
-        <v-card-title>
+        <v-card-title class="flex-nowrap">
           Common Form
+          <span v-if="!isValidForm">: Complete form with valid data</span>
         </v-card-title>
         <v-card-text>
           <v-text-field
