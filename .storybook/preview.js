@@ -8,6 +8,7 @@ import '@/plugins/validators'
 import '@/plugins/fragment'
 import '@/plugins/events'
 import '@/components'
+import '@/toastr'
 
 import '@/styles/index.scss'
 import './storybook.css'
