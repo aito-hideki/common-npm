@@ -52,7 +52,7 @@ const Template = (args, { argTypes }) => ({
         <v-spacer />
         <v-btn
           rounded
-          @click="$events.$emit('form.reset.common-form')"
+          @click="$events.emit('form.reset.common-form')"
         >
           Reset validation
         </v-btn>

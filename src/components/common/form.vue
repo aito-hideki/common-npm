@@ -31,7 +31,7 @@ export default {
       emit('submit')
     }
 
-    events.$on(`form.reset.${props.name}`, () => {
+    events.on(`form.reset.${props.name}`, () => {
       form.value.resetValidation()
     })
 
